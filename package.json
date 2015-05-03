@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
+    "asar": "^0.6.1",
     "bower": "~1.3.2",
     "connect-livereload": "0.3.2",
     "connect-modrewrite": "0.6.4-pre",
@@ -62,6 +63,12 @@
     "node": ">=0.8.0"
   },
   "scripts": {
+    "build-win-prep": "rm -rf dist && cp -r node_modules\\electron-prebuilt\\dist dist && rm -rf dist\\resources\\default_app && rm -f dist\\resources\\app.asar",
+    "build-win-package": ".\\node_modules\\.bin\\asar.cmd pack app dist\\resources\\app.asar",
+    "build-win": "npm run-script build-win-prep && npm run-script build-win-package",
+    "run-build-win": "npm run-script build-win && .\\dist\\electron.exe",
+    "run-src-win": ".\\node_modules\\.bin\\electron.cmd app\\",
+
     "test": "grunt travis"
   }
 }

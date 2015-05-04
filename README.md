@@ -42,5 +42,5 @@ To use the application in an [Electron](http://electron.atom.io/) container, do 
 $ npm install
 $ ./node_modules/.bin/bower install
 $ ./node_modules/.bin/grunt ngtemplates
-$ npm run-script run-src
+$ npm run run-src
 ```

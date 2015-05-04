@@ -4,7 +4,7 @@
   "dependencies": {},
   "devDependencies": {
     "asar": "^0.6.1",
-    "bower": "~1.3.2",
+    "bower": "^1.4.1",
     "connect-livereload": "0.3.2",
     "connect-modrewrite": "0.6.4-pre",
     "grunt": "~0.4.1",
@@ -68,7 +68,6 @@
     "build-win": "npm run-script build-win-prep && npm run-script build-win-package",
     "run-build-win": "npm run-script build-win && .\\dist\\electron.exe",
     "run-src-win": ".\\node_modules\\.bin\\electron.cmd app\\",
-
     "test": "grunt travis"
   }
 }

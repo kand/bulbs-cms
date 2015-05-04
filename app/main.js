@@ -14,8 +14,14 @@ app.on('window-all-closed', function () {
 });
 
 app.on('ready', function () {
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({
+    height: 600,
+    title: 'Bulbs CMS',
+    width: 800
+  });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
+
+  mainWindow.openDevTools({detatched: true});
 
   mainWindow.on('closed', function () {
     mainWindow = null;

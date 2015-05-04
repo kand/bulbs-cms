@@ -45,7 +45,9 @@ angular.module('bulbsCmsApp', [
   'sections'
 ])
 .config(function ($locationProvider, $routeProvider, $sceProvider, routes) {
-  $locationProvider.html5Mode(true);
+
+// TODO : this shit breaks atom-shell, see https://github.com/angular/angular.js/issues/11091
+  // $locationProvider.html5Mode(true);
 
   $routeProvider
     .when('/cms/app/list/', {

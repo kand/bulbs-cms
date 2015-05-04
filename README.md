@@ -34,3 +34,13 @@ $ export GITHUB_TOKEN=your-access-token-here
 ```
 
 You'll probably want to put those export commands in your `.bash_profile`
+
+As a Electron App
+-----------------
+To use the application in an [Electron](http://electron.atom.io/) container, do the following:
+```bash
+$ npm install
+$ .\node_modules\.bin\bower install
+$ .\node_modules\.bin\grunt ngtemplates
+$ npm run-script run-src
+```

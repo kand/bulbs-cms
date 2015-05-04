@@ -16,14 +16,18 @@ app.on('window-all-closed', function () {
 app.on('ready', function () {
   mainWindow = new BrowserWindow({
     center: true,
-    fullscreen: true,
     height: 720,
     title: 'Bulbs CMS',
     width: 1280
   });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
-  mainWindow.openDevTools({detatched: true});
+  process.argv.forEach(function(val, index) {
+    if (val === '-d' || val === '--debug') {
+      mainWindow.openDevTools({detatched: true});
+      console.log('Starting with dev tools...');
+    }
+  });
 
   mainWindow.on('closed', function () {
     mainWindow = null;

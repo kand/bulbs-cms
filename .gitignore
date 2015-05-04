@@ -6,6 +6,7 @@ npm-debug.log
 app/bower_components
 app/styles/**/*.css
 app/keys.js
+app/templates.js
 coverage
 .idea/
 .DS_Store

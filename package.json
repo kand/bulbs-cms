@@ -7,6 +7,7 @@
     "bower": "^1.4.1",
     "connect-livereload": "0.3.2",
     "connect-modrewrite": "0.6.4-pre",
+    "electron-prebuilt": "^0.25.2",
     "grunt": "~0.4.1",
     "grunt-angular-templates": "~0.5.3",
     "grunt-autoprefixer": "~0.4.0",

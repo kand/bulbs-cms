@@ -40,7 +40,7 @@ As a Electron App
 To use the application in an [Electron](http://electron.atom.io/) container, do the following:
 ```bash
 $ npm install
-$ .\node_modules\.bin\bower install
-$ .\node_modules\.bin\grunt ngtemplates
+$ ./node_modules/.bin/bower install
+$ ./node_modules/.bin/grunt ngtemplates
 $ npm run-script run-src
 ```

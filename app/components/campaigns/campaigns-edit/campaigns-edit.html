@@ -1,5 +1,5 @@
 <top-bar
-  logo-href="/cms/app/campaigns/"
+  logo-href="#/cms/app/campaigns/"
   save-function="saveModel"
   save-disable-when="model.$dirty().length === 0 && !isNew">
 </top-bar>
@@ -7,7 +7,7 @@
 <div id="campaigns-edit">
   <div class="container col-xs-offset-2 col-xs-8">
     <h3>
-      <a href="/cms/app/campaigns/">Campaigns</a>
+      <a href="#/cms/app/campaigns/">Campaigns</a>
       &gt;
       <span ng-if="isNew && !model.campaignLabel">New Campaign</span>
       <span ng-if="!isNew || model.campaignLabel">{{ model.campaignLabel }}</span>

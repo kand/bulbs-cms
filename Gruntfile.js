@@ -493,7 +493,10 @@ module.exports = function (grunt) {
       bulbsCmsApp: {
         cwd: '<%= settings.app %>',
         src: [
-          'views/{,*/}*.html',
+          'views/**/*.html',
+// TODO : this gives a 404, but ngtemplates can't handle this
+          // 'views/inline-objects.json',
+          'content_type_views/**/*.html',
           'components/**/*.html',
           'shared/**/*.html'
         ],

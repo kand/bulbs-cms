@@ -1,12 +1,12 @@
 <top-bar
-  logo-href="/cms/app/section/"
+  logo-href="#/cms/app/section/"
   save-function="saveModel"
   save-disable-when="model.$dirty().length === 0 && !isNew && !needsSave">
 </top-bar>
 
 <div class="container col-xs-offset-2 col-xs-8">
   <h3>
-      <a href="/cms/app/section/">Sections</a>
+      <a href="#/cms/app/section/">Sections</a>
       &gt;
       <span ng-if="isNew && !model.name">New Section</span>
       <span ng-if="!isNew || model.name">{{ model.name }}</span>

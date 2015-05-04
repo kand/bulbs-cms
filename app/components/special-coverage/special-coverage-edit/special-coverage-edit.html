@@ -1,12 +1,12 @@
 <top-bar
-  logo-href="/cms/app/special-coverage/"
+  logo-href="#/cms/app/special-coverage/"
   save-function="saveModel"
   save-disable-when="model.$dirty().length === 0 && !isNew && !needsSave">
 </top-bar>
 
 <div class="container col-xs-offset-2 col-xs-8">
   <h3>
-      <a href="/cms/app/special-coverage">Special Coverage Lists</a>
+      <a href="#/cms/app/special-coverage">Special Coverage Lists</a>
       &gt;
       <span ng-if="isNew && !model.name">New Special Coverage</span>
       <span ng-if="!isNew || model.name">{{ model.name }}</span>

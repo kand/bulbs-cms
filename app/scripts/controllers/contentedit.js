@@ -13,16 +13,6 @@ angular.module('bulbsCmsApp')
     $scope.MEDIA_ITEM_PARTIALS_URL = routes.MEDIA_ITEM_PARTIALS_URL;
     $scope.page = 'edit';
 
-    /*note on cachebuster:
-      contentedit ng-includes templates served by django
-      which are currently treated like templates
-      instead of static assets (which they are)
-      we're cachebuster those URLs because we've run into trouble
-      with cached version in the past and it was a bludgeon solution
-        kill this someday! --SB
-    */
-    $scope.CACHEBUSTER = routes.CACHEBUSTER;
-
     var getArticleCallback = function (data) {
       $window.article = $scope.article = data; //exposing article on window for debugging
 

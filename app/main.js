@@ -15,9 +15,11 @@ app.on('window-all-closed', function () {
 
 app.on('ready', function () {
   mainWindow = new BrowserWindow({
-    height: 600,
+    center: true,
+    fullscreen: true,
+    height: 720,
     title: 'Bulbs CMS',
-    width: 800
+    width: 1280
   });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
 

@@ -52,13 +52,11 @@ angular.module('bulbsCmsApp', [
   $routeProvider
     .when('/cms/app/list/', {
       templateUrl: routes.PARTIALS_URL + 'contentlist.html',
-      controller: 'ContentlistCtrl',
-      reloadOnSearch: false
+      controller: 'ContentlistCtrl'
     })
     .when('/cms/app/edit/:id/', {
       templateUrl: routes.PARTIALS_URL + 'contentedit.html',
-      controller: 'ContenteditCtrl',
-      reloadOnSearch: false
+      controller: 'ContenteditCtrl'
     })
     .when('/cms/app/edit/:id/contributions/', {
       templateUrl: routes.PARTIALS_URL + 'contributions.html',

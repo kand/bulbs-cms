@@ -64,10 +64,16 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "build-prep": "rm -rf dist && cp -r node_modules/electron-prebuilt/dist dist && rm -rf dist/resources/default_app && rm -f dist/resources/app.asar",
-    "build-package": "./node_modules/.bin/asar pack app dist/resources/app.asar",
-    "build": "npm run build-prep && npm run build-package",
+    "build-mac-prep": "rm -rf dist && cp -av node_modules/electron-prebuilt/dist dist && rm -rf dist/Electron.app/Contents/Resources/default_app && rm -f dist/Electron.app/Contents/Resources/app.asar",
+    "build-mac-pack": "./node_modules/.bin/asar pack app dist/Electron.app/Contents/Resources/app.asar",
+    "build-mac": "npm run build-mac-prep && npm run build-mac-pack",
+    "run-build-mac": "npm run build-mac && open dist/Electron.app",
+
+    "build-win-prep": "rm -rf dist && cp -r node_modules/electron-prebuilt/dist dist && rm -rf dist/resources/default_app && rm -f dist/resources/app.asar",
+    "build-win-pack": "./node_modules/.bin/asar pack app dist/resources/app.asar",
+    "build-win": "npm run build-win-prep && npm run build-win-pack",
     "run-build-win": "npm run build-win && dist/electron.exe",
+
     "run-src": "./node_modules/.bin/electron app",
     "test": "grunt travis"
   }
